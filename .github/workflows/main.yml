@@ -19,3 +19,8 @@ jobs:
         uses: actions/checkout@v4
       - name: SmartCoder Code Review
         uses: xuxhing/code-review-action@v1.0.0-beta
+        with:
+          GITHUB_TOKEN: ${{ secrets.GIT_HUB_API_KEY }}
+          SMART_CODER_API_URL: ${{ vars.SMART_CODER_API_URL }}
+          SMART_CODER_API_KEY: ${{ secrets.SMART_CODER_API_KEY }}
+          exclude: "yarn.lock,dist/**"
