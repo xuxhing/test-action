@@ -14,11 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        id: checkout
-        uses: actions/checkout@v4
       - name: SmartCoder Code Review
-        uses: xuxhing/code-review-action@v1.0.0-beta
+        uses: xuxhing/code-review-action@v1.0.1
         with:
           GITHUB_TOKEN: ${{ secrets.GIT_HUB_API_KEY }}
           SMART_CODER_API_URL: ${{ vars.SMART_CODER_API_URL }}
