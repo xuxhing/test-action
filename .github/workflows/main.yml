@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: SmartCoder Code Review
-        uses: xuxhing/code-review-action@v1.0.13
+        uses: xuxhing/code-review-action@v1.0.14
         with:
           GITHUB_TOKEN: ${{ secrets.GIT_HUB_API_KEY }}
           SMART_CODER_API_URL: ${{ vars.SMART_CODER_API_URL }}
