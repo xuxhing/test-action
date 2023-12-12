@@ -4,7 +4,6 @@ on:
   pull_request:
     types:
       - opened
-      - reopened
       - synchronize
 
 permissions: write-all
@@ -17,7 +16,7 @@ jobs:
       - name: SmartCoder Code Review
         uses: xuxhing/code-review-action@v1.0.17
         with:
-          GITHUB_TOKEN: ${{ secrets.GIT_HUB_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
           SMART_CODER_API_URL: ${{ vars.SMART_CODER_API_URL }}
           SMART_CODER_API_KEY: ${{ secrets.SMART_CODER_API_KEY }}
           exclude: "yarn.lock,dist/**"
